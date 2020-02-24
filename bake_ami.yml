@@ -10,10 +10,10 @@
   - name: launch temporary instance
     ec2:
       assign_public_ip: yes
-      region: "{{ region }}"
+      region: "{{ eu-west-2 }}"
       key_name: "{{ key_name }}"
       group_id: "{{ ami_group_id }}"
-      instance_type: t2.micro
+      instance_type: t2.medium
       vpc_subnet_id: "{{ vpc.subnets[0].id }}"
       image: "{{ ami_base_image }}"
       wait: yes
